@@ -1,2 +1,2 @@
 # framework
-SSM模板
+springMVC +  spring + mybatis的基础框架模板 
