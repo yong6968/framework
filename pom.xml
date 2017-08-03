@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.deyond.framework</groupId>
+  <artifactId>framework</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+	<springframework.version>4.3.7.RELEASE</springframework.version>
+	<jackson.version>2.8.7</jackson.version>
+  </properties>
+  
+  <dependencies>
+  
+    <!-- spring begin-->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-webmvc</artifactId>
+		<version>${springframework.version}</version>
+	</dependency>
+	<!-- spring end -->
+	
+	<!-- jackson json begin-->
+	<dependency>
+		<groupId>com.fasterxml.jackson.core</groupId>
+		<artifactId>jackson-core</artifactId>
+		<version>${jackson.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>com.fasterxml.jackson.core</groupId>
+		<artifactId>jackson-databind</artifactId>
+		<version>${jackson.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>com.fasterxml.jackson.core</groupId>
+		<artifactId>jackson-annotations</artifactId>
+		<version>${jackson.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>com.fasterxml.jackson.module</groupId>
+		<artifactId>jackson-module-jaxb-annotations</artifactId>
+		<version>${jackson.version}</version>
+	</dependency>
+	<!-- jackson json end-->
+	
+	<dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>3.1.0</version>
+		<scope>provided</scope>
+    </dependency>
+    
+    <dependency>
+		<groupId>com.alibaba</groupId>
+		<artifactId>fastjson</artifactId>
+		<version>1.2.1</version>
+	</dependency>
+  </dependencies>
+  <build>
+    <finalName>framework</finalName>
+  </build>
+</project>
