@@ -1,16 +1,24 @@
-package com.deyond.framework.module.sys.controller;
+package com.deyond.framework.module.channel.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.deyond.framework.module.channel.entity.page.ChannelPage;
+import com.deyond.framework.module.channel.service.ChannelService;
 
 @Controller
-@RequestMapping("sys/")
-public class SysController {
+@RequestMapping("channel")
+public class ChannelController {
+	
+	@Autowired
+	ChannelService channelService;
 	
 	/**
 	 * 跳转列表页面
@@ -26,8 +34,11 @@ public class SysController {
 	}
 	
 	@RequestMapping(value = "/findList")
+	@ResponseBody
 	public String findList(ModelMap map, HttpServletRequest request, HttpServletResponse response)
-	{
+	{	
+		ChannelPage page = new ChannelPage();
+		channelService.findList(page);
 		return "about";
 	}
 }
