@@ -22,7 +22,7 @@ public class SysController {
 	@RequestMapping(value = "/findListUI", method = { RequestMethod.GET })
 	public String findListUI(ModelMap map, HttpServletRequest request, HttpServletResponse response)
 	{
-		return "about";
+		return "upload/upload";
 	}
 	
 	@RequestMapping(value = "/findList")
@@ -30,4 +30,6 @@ public class SysController {
 	{
 		return "about";
 	}
+
+
 }

@@ -1,0 +1,10 @@
+UPDATE t_activity_jackpot
+SET prizeNumber = prizeNumber + number
+WHERE id=''
+
+
+UPDATE t_activity_jackpot j
+left join (select activityName,sum(prizeNumber) as total from t_activity_jackpot GROUP BY activityName) t
+ON j.activityName = t.activityName
+SET j.prizeProbability= ROUND(j.prizeNumber/t.total*100,2) 
+WHERE j.activityName='深都奖池'
