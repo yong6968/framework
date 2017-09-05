@@ -1,5 +1,21 @@
+﻿<!-- 追加 -->
+	<update id="couponPlanSuperaddition">
+		UPDATE t_coupon_plan SET totalNum =totalNum+#{addNum} ,note
+		=#{note},versionNo=versionNo+1 WHERE planId in
+		<foreach collection="planIds" item="planId" index="index"
+			open="(" close=")" separator=",">
+			#{planId}
+		</foreach>
+	</update>
+
+
 UPDATE t_activity_jackpot
-SET prizeNumber = prizeNumber + number
+SET prizeNumber = totalNum+#{addNum} 
+versionNo+1 WHERE planId in
+<foreach collection="planIds" item="planId" index="index"
+	open="(" close=")" separator=",">
+	#{planId}
+</foreach>
 WHERE id=''
 
 

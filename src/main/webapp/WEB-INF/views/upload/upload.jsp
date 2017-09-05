@@ -10,7 +10,7 @@
 		#son {width:0; height:100%; background-color:#09F; text-align:center; line-height:10px; font-size:20px; font-weight:bold;}
 	</style>
 	<script type="text/javascript" src="${pageContext.request.contextPath}／static/js/jquery.js"></script>
-	<script type="text/javascript">
+	<script type="text/javascript" >
         function showPic(){
             var pic = $("#pic").get(0).files[0];
             $("img").prop("src" , window.URL.createObjectURL(pic) );
