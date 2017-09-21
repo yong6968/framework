@@ -39,6 +39,6 @@ public class ChannelController {
 	{	
 		ChannelPage page = new ChannelPage();
 		channelService.findList(page);
-		return "about";
+		return "{name:'sdfsdf',age:18}";
 	}
 }

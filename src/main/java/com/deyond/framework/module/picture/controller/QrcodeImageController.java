@@ -19,7 +19,14 @@ import com.deyond.framework.common.utils.ZxingUtils;
 @Controller
 @RequestMapping("picture/")
 public class QrcodeImageController {
-	
+
+	/**
+	 * 功能:根据访问地址生成对应2维码图片
+	 * @param map
+	 * @param request
+	 * @param response
+	 * @return
+	 */
 	@RequestMapping(value = "/qrcode", method = { RequestMethod.GET })
 	public String qrcode(ModelMap map, HttpServletRequest request, HttpServletResponse response)
 	{	
