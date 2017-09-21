@@ -7,9 +7,6 @@ import com.deyond.framework.common.entity.Page;
 
 /**
  * 功能：基本接口，不是为了公用，而是为了约束常用功能方法的命名。 类和子类中的方法排序需遵守 增、删、改、查 的顺序，在此基础上常用名要优先，如getById要先于getByUserId。
- *
- * @version 2016年12月28日下午8:55:38
- * @author baocheng.ren
  * @param <T>
  */
 public interface BasicDAO<T> {

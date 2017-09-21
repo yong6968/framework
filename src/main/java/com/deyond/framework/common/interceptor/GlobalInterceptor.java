@@ -29,8 +29,13 @@ public class GlobalInterceptor implements HandlerInterceptor {
 
     private Logger logger = LoggerFactory.getLogger(GlobalInterceptor.class);
 
-    /** 线程开始时间变量 */
+    /**
+     * 线程开始时间变量
+     */
     private static final ThreadLocal<Long> START_TIME_THREADLOCAL = new NamedThreadLocal<Long>("ThreadLocal StartTime");
+    /**
+     * 请求唯一标识
+     */
     private static final ThreadLocal<Long> REQUEST_ID_THREADLOCAL = new NamedThreadLocal<Long>("ThreadLocal RequestId");
 
     /**
@@ -99,7 +104,7 @@ public class GlobalInterceptor implements HandlerInterceptor {
         long time = endTime - beginTime;
         String url = request.getServletPath();
         String out = o==null?null:o.toString();
-        logger.info("<<<<<请求ID:{}，调用[{}]，出参[{}]，耗时[{}ms]",REQUEST_ID_THREADLOCAL.get(),url, out, time);
+        logger.info("<<<<<响应ID:{}，调用[{}]，出参[{}]，耗时[{}ms]",REQUEST_ID_THREADLOCAL.get(),url, out, time);
         return o;
     }
 
