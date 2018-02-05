@@ -49,4 +49,25 @@ public class QrcodeImageController {
 		}  
 	    return null;
 	}
+	
+	/**
+     * 功能:重定向地址
+     * @version 2018年2月5日 上午11:41:37
+     * @param map
+     * @param request
+     * @param response
+     * @return
+     */
+    @RequestMapping(value = "/sendRedirect", method = { RequestMethod.GET })
+    public String sendRedirect(ModelMap map, HttpServletRequest request, HttpServletResponse response){
+        String uuid = request.getParameter("uuid");//接收数据
+        try {
+            uuid = new String(uuid.getBytes("ISO8859-1"), "UTF-8") ;
+            response.sendRedirect(uuid);
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

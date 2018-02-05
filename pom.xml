@@ -46,6 +46,7 @@
 		<artifactId>mybatis</artifactId>
 		<version>${mybatis.version}</version>
 	</dependency>
+	
 	<dependency>
 		<groupId>org.mybatis</groupId>
 		<artifactId>mybatis-spring</artifactId>
@@ -109,6 +110,11 @@
     	<version>3.1.0</version>
 	</dependency>
 	<!-- 日志文件管理包 -->
+	 <dependency>
+         <groupId>log4j</groupId>
+         <artifactId>log4j</artifactId>
+         <version>1.2.17</version>
+      </dependency>
 	  <dependency>
 		  <groupId>org.slf4j</groupId>
 		  <artifactId>slf4j-api</artifactId>
@@ -129,6 +135,11 @@
 		  <artifactId>logstash-logback-encoder</artifactId>
 		  <version>4.8</version>
 	  </dependency>
+	  <dependency>  
+	    <groupId>com.esotericsoftware.reflectasm</groupId>  
+	    <artifactId>reflectasm</artifactId>  
+	    <version>1.09</version>  
+	</dependency>  
 	
   </dependencies>
   <build>

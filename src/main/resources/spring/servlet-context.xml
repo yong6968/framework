@@ -20,7 +20,7 @@
 	<!-- 启动标签注解 -->
 	<mvc:annotation-driven />
 	<!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
-	<context:component-scan base-package="com.deyond.framework.**.controller" />
+	<context:component-scan base-package="com.deyond.framework.**,controller" />
 
 	<!-- 通过有效地服务来处理HTTP GET /资源/** 请求 在$ {webappRoot}/ resources目录中增加静态资源-->
 	<mvc:resources mapping="/static/**" location="/static/" />
